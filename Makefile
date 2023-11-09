@@ -3,7 +3,7 @@
 # Variables
 VENV_NAME?=venv
 PYTHON=${VENV_NAME}/bin/python3
-ERRBOT=${VENV_NAME}//bin/errbot
+ERRBOT=${VENV_NAME}/bin/errbot
 PIP=${VENV_NAME}/bin/pip3
 
 # Targets
@@ -23,6 +23,11 @@ delete:
 	docker rm redis-errbot
 
 errbot:
+	$(ERRBOT) --init
+	mkdir -p ./data/plugins/errbotio/err-storage-redis
+	cp ./files/redisstorage.plug ./data/plugins/errbotio/err-storage-redis
+	cp ./files/redisstorage.py ./data/plugins/errbotio/err-storage-redis
+	cp ./files/config.py ./config.py
 	$(ERRBOT) -T
 
 start: venv docker errbot

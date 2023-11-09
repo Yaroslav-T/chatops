@@ -1,7 +1,7 @@
 # Пример установки и запуска errbot c err-storage-redis
 Для запуска:
 - склонировать репозиторий
-- перейти в репозиторий
+- перейти в папку куда был скопирован репозиторий
 - `make start`
 - для удаления запущенного в процессе контейнера с redis `make delete`
 
@@ -15,7 +15,7 @@
 # Example of installing and running errbot with err-storage-redis
 To start:
 - clone the repository
-- navigate into the repository
+- navigate to the folder where the repository was copied
 - run `make start`
 - to remove the running Redis container, use `make delete`
 

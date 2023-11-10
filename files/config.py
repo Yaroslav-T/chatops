@@ -29,7 +29,7 @@ BOT_IDENTITY = {
 BOT_EXTRA_STORAGE_PLUGINS_DIR = str(current_directory / r"data/plugins/errbotio/err-storage-redis")
 STORAGE = 'Redis'
 STORAGE_CONFIG = {
-    'host': 'localhost',
+    'host': 'redis',
     'port': 6379,
     'db': 0,
     'password': '',

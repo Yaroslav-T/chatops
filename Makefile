@@ -28,6 +28,6 @@ errbot:
 	cp ./files/redisstorage.plug ./data/plugins/errbotio/err-storage-redis
 	cp ./files/redisstorage.py ./data/plugins/errbotio/err-storage-redis
 	cp ./files/config.py ./config.py
-	$(ERRBOT) -T
+	$(ERRBOT)
 
 start: venv docker errbot
